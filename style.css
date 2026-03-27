@@ -1,0 +1,145 @@
+:root {
+  --blue-500: hsl(215, 51%, 70%);
+  --cyan-400: rgba(0, 255, 247);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-clr: hsl(215, 32%, 27%);
+}
+.text-preset1 {
+  font-size: 22px;
+  line-height: 125%;
+  font-weight: 600;
+}
+.text-preset2 {
+  font-size: 18px;
+  line-height: 125%;
+  font-weight: 300;
+}
+.text-preset3-semiBold {
+  font-size: 16px;
+  line-height: 125%;
+  font-weight: 600;
+}
+.text-preset3-regular {
+  font-size: 16px;
+  line-height: 125%;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--card-bg);
+  width: 350px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+.card-p-name {
+  align-self: flex-start;
+}
+h1 {
+  color: white;
+}
+
+.card-img {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+}
+.overlay img {
+  width: 33px;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 255, 247, 0.433);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: ease-in 0.2s;
+}
+.card-img:hover .overlay {
+  opacity: 1;
+}
+.card-img:hover ~ .card-p-name h1 {
+  color: var(--cyan-400);
+}
+.card-img:hover ~ .card-footer .pname {
+  color: var(--cyan-400);
+}
+h1,
+.pname {
+  transition: ease-in 0.2s;
+}
+
+.card-content {
+  color: var(--blue-500);
+}
+.card-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-data span {
+  margin-right: 8px;
+}
+.currency {
+  color: var(--cyan-400);
+  display: flex;
+  align-items: center;
+}
+.post-time {
+  color: var(--blue-500);
+  display: flex;
+  align-items: center;
+}
+.currency img,
+.post-time img {
+  margin-right: 8px;
+}
+.card-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profile-img {
+  width: 33px;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.caption {
+  font-size: 16px;
+  color: white;
+}
+.caption span {
+  color: var(--blue-500);
+}
+.caption .pname {
+  color: white;
+}
